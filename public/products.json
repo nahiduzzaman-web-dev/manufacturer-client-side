@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Li-Ion Compact Drill Driver",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/61zL8KiBofL._AC_SL1280_-1.jpg",
+        "description": "10.8 Volt 2 x 2.0Ah Li-Ion Compact Drill Driver Dewalt Brand DCD710D2",
+        "minimum_quantity": "20",
+        "available_quantity": "1999",
+        "price": 458
+    },
+    {
+        "_id": 2,
+        "name": "Demolition Hammer",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/TH213006-1.jpg",
+        "description": "1300W Demolition Hammer Total Brand TH213006",
+        "minimum_quantity": "20",
+        "available_quantity": "1749",
+        "price": 167
+    },
+    {
+        "_id": 3,
+        "name": "Wooden Handle",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/axeWoodenHandle-1.jpg",
+        "description": "6 Inch Axe with 12 Inch Wooden Handle",
+        "minimum_quantity": "20",
+        "available_quantity": "2150",
+        "price": 9
+    },
+    {
+        "_id": 4,
+        "name": "Auto Air Compressor",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/TTAC1406-1.jpg",
+        "description": "12V 140PSI 35L/min Auto Air Compressor Total Brand TTAC1406",
+        "minimum_quantity": "20",
+        "available_quantity": "599",
+        "price": 55
+    },
+    {
+        "_id": 5,
+        "name": "Single Speed Jigsaw ",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/713oy5MP2yL._AC_SL1500_-1.jpg",
+        "description": "400W Compact Single Speed Jigsaw with blade Black+Decker Brand KS501K",
+        "minimum_quantity": "20",
+        "available_quantity": "1320",
+        "price": 67
+    },
+    {
+        "_id": 6,
+        "name": "Steel Bench Vise",
+        "image": "https://fixit.com.bd/wp-content/uploads/2021/06/p_161021_06323-1.jpg",
+        "description": "10 Inch Cast Steel Bench Vise Toptul Brand DJAC0110",
+        "minimum_quantity": "20",
+        "available_quantity": "1149",
+        "price": 309
+    }
+]

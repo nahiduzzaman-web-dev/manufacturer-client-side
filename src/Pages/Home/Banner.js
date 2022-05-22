@@ -34,7 +34,7 @@ const Banner = () => {
                 <div className="hero">
                     <div className="hero-content text-center">
                         <div className="max-w-md">
-                            <h1 className="text-5xl font-bold">Hello there <span className='text-primary'>!</span></h1>
+                            <h1 className="text-5xl font-bold uppercase tracking-[.10em]">Hello there <span className='text-primary'>!</span></h1>
                             <p className="py-6">This Tools Provita Ltd. You can buy any type tools such as, manufacture cutting tools , measuring tools, dies/molds and wear-resistant tools. Has high hardness and can maintain high hardnessand red hardness at high temperature etc.</p>
                             <button className="btn btn-primary">Get Started</button>
                         </div>

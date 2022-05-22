@@ -8,7 +8,7 @@ const BussinessSummery = () => {
     return (
         <div>
             <div className='text-center my-10'>
-                <h3 className='text-3xl text-primary font-bold'>MILLIONS BUSINESS TRUST ME</h3>
+                <h3 className='text-3xl text-primary font-bold tracking-[.20em]'>MILLIONS BUSINESS TRUST ME</h3>
                 <p className='font-bold'>TRY TO UNDERSTAND USERS EXPECTATION</p>
             </div>
             <div className="stats stats-vertical lg:stats-horizontal shadow w-full">
@@ -45,16 +45,16 @@ const BussinessSummery = () => {
 
 
             </div>
-            <div class="hero my-10">
-                <div class="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero my-10">
+                <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl mx-10">
                     <div className='flex mx-10'>
-                        <button class="btn btn-wide mr-5 bg-secondary border-0 hover:bg-sky-700 text-white">Request For Quote</button>
-                        <button class="btn border-0 bg-primary text-white hover:bg-orange-400">Contact Us</button>
+                        <button className="btn btn-wide mr-5 bg-secondary border-0 hover:bg-sky-700 text-white">Request For Quote</button>
+                        <button className="btn border-0 bg-primary text-white hover:bg-orange-400">Contact Us</button>
                     </div>
                     <div className='lg:mx-20 mx-auto'>
-                        <h1 class="text-3xl font-bold text-primary">Have any question about us or get a
+                        <h1 className="text-3xl font-bold text-primary">Have any question about us or get a
                             products request ?</h1>
-                        <p class="font-bold text-xl my-4">Don't hesitate to contact us</p>
+                        <p className="font-bold text-xl my-4">Don't hesitate to contact us</p>
                     </div>
                 </div>
             </div>
