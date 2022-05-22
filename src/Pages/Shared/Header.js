@@ -1,14 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { IoLogInSharp } from 'react-icons/io5'
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Header = () => {
-
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/tools'>Tools</Link></li>
         <li><Link to='/reviews'>Reviews</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
+        <li><Link to='/contact'>Contact</Link></li>
         <li><Link to='/about'>About</Link></li>
+        <li>{user ? <button onClick={logout} className="btn btn-outline btn-primary  text-secondary">Sign out</button> : <span className='text-orange-600 text-xl'><Link to='/login'>Login  <IoLogInSharp /></Link></span>}</li>
+
     </>
     return (
         <div className="navbar bg-accent text-white fixed z-[100]"

@@ -7,6 +7,7 @@ import Company from './Company';
 import Offer from './Offer';
 import ProductCard from './ProductCard';
 import { GiArmoredBoomerang } from 'react-icons/gi';
+import Contact from './Contact';
 
 const HomePage = () => {
     const [products] = useProducts();
@@ -32,6 +33,7 @@ const HomePage = () => {
                 </div>
             </div>
             <BussinessSummery></BussinessSummery>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
