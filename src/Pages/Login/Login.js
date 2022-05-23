@@ -125,7 +125,7 @@ const Login = () => {
                         <input className='btn w-full max-w-md' type="submit" value='Login' />
                     </form>
 
-                    <p className='text-xs text-center font-bold'>New to Doctors Portal <Link to='/signup' className='text-primary'>Create New Account</Link></p>
+                    <p className='text-xs text-center font-bold'>New to Tools Provita Ltd ? <Link to='/signup' className='text-primary'>Create New Account</Link></p>
                     <div className="divider">OR</div>
 
                     <button

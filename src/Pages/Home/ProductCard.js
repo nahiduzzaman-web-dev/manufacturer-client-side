@@ -1,7 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const ProductCard = ({ product }) => {
     const { name, image, description, minimum_quantity, available_quantity, price } = product;
+    const navigate = useNavigate();
+
+    const handlePurchase = id => {
+        navigate(`/purchase/${id}`);
+    }
+
+
     return (
         <div className="card w-96 bg-base-100 shadow-2xl mx-5 my-10">
             <figure className="pt-10 bg-primar">
@@ -23,7 +32,9 @@ const ProductCard = ({ product }) => {
                 </p>
 
             </div>
-            <button class="btn btn-block rounded-none bg-primary border-0 text-white capitalize text-2xl">Purchase</button>
+            <button
+                onClick={() => handlePurchase(product._id)}
+                class="btn btn-block rounded-none bg-primary border-0 text-white capitalize text-2xl">Purchase</button>
         </div>
     );
 };

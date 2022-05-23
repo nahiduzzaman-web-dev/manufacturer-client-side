@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useProducts from '../hooks/useProducts';
 import ProductCard from './ProductCard';
 
 const ProductsTools = () => {
     const [products] = useProducts();
+
     return (
         <div>
             <div className='text-center font-bold'>

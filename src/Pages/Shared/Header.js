@@ -18,7 +18,7 @@ const Header = () => {
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li>{user ? <button onClick={logout} className="btn btn-outline btn-primary  text-secondary">Sign out</button> : <span className='text-orange-600 text-xl'><Link to='/login'>Login  <IoLogInSharp /></Link></span>}</li>
+        <li>{user ? <button onClick={logout} className="btn btn-outline btn-primary  text-secondary">Sign out</button> : <span className='text-orange-600 text-xl'><Link to='/login' className='flex justify-center'>Login  <IoLogInSharp /></Link></span>}</li>
 
     </>
     return (
