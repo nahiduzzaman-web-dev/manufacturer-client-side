@@ -22,13 +22,14 @@ const ProductCard = ({ product }) => {
                 <div className='text-left font-mono '>
                     <p>
                         <span className='text-secondary'>Minimum Quantity:</span>
-                        <span className=''> {minimum_quantity} pis</span>
+                        {minimum_quantity} <span className='text-base-300'>units</span>
                     </p>
-                    <p><span className='text-secondary'>Available Quantity:</span> {available_quantity} pis</p>
+                    <p><span className='text-secondary'>Available Quantity:</span>
+                        {available_quantity} <span className='text-base-300'>units</span></p>
                 </div>
-                <p className='text-2xl font-bold'>
-                    <span className='text-red-500'>$</span>
-                    <span> {price}</span>
+                <p className=''>
+                    <span className='text-red-500 text-2xl font-bold'>$</span>
+                    <span className='text-2xl font-bold'> {price}</span> <span className='text-base-300'> / unit</span>
                 </p>
 
             </div>

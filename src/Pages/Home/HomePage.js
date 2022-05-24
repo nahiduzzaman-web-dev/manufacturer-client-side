@@ -8,6 +8,7 @@ import Offer from './Offer';
 import ProductCard from './ProductCard';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 import Contact from './Contact';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const [products] = useProducts();
@@ -27,9 +28,11 @@ const HomePage = () => {
                 </div>
                 <div className='flex justify-center'>
 
-                    <button class="btn btn-wide btn-outline btn-primary">
-                        <span className='font-bold mr-5 text-xl'>More Purchase</span> <GiArmoredBoomerang className='text-3xl' />
-                    </button>
+                    <Link to='/tools'>
+                        <button class="btn btn-wide btn-outline btn-primary">
+                            <span className='font-bold mr-5 text-xl'>More Purchase</span> <GiArmoredBoomerang className='text-3xl' />
+                        </button>
+                    </Link>
                 </div>
             </div>
             <BussinessSummery></BussinessSummery>

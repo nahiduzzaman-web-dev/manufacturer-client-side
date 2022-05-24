@@ -3,6 +3,7 @@ import { GiFlyingFlag } from 'react-icons/gi';
 import { FaUsers } from 'react-icons/fa';
 import { RiEmotionHappyFill } from 'react-icons/ri';
 import { VscFeedback } from 'react-icons/vsc';
+import { Link } from 'react-router-dom';
 
 const BussinessSummery = () => {
     return (
@@ -47,9 +48,13 @@ const BussinessSummery = () => {
             </div>
             <div className="hero my-10">
                 <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl mx-10">
-                    <div className='flex mx-10'>
-                        <button className="btn btn-wide mr-5 bg-secondary border-0 hover:bg-sky-700 text-white">Request For Quote</button>
-                        <button className="btn border-0 bg-primary text-white hover:bg-orange-400">Contact Us</button>
+                    <div className='flex'>
+                        <Link to='/signup'>
+                            <button className="btn btn-wide mr-3 bg-secondary border-0 hover:bg-sky-700 text-white">Request For Quote</button>
+                        </Link>
+                        <Link to='/contact'>
+                            <button className="btn border-0 bg-primary text-white hover:bg-orange-400">Contact Us</button>
+                        </Link>
                     </div>
                     <div className='lg:mx-20 mx-auto'>
                         <h1 className="text-3xl font-bold text-primary">Have any question about us or get a

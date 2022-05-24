@@ -14,10 +14,13 @@ const Header = () => {
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/tools'>Tools</Link></li>
-        <li><Link to='/reviews'>Reviews</Link></li>
+        <li><Link to='/review'>Reviews</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
         <li><Link to='/about'>About</Link></li>
+        {
+            user && <li><Link className='text-secondary bg-white font-bold mr-3' to='/dashboard'>Dashboard</Link></li>
+        }
         <li>{user ? <button onClick={logout} className="btn btn-outline btn-primary  text-secondary">Sign out</button> : <span className='text-orange-600 text-xl'><Link to='/login' className='flex justify-center'>Login  <IoLogInSharp /></Link></span>}</li>
 
     </>
@@ -42,6 +45,11 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                <label tabIndex="1" htmlFor="dasboard-sidebar" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
             </div>
         </div>
     );
