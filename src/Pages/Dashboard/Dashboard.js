@@ -67,6 +67,7 @@ const Dashboard = () => {
                             admin && <>
                                 <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>All Users</Link></li>
                                 <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/manageProducts'>Manage Products</Link></li>
                             </>
                         }
                     </ul>
