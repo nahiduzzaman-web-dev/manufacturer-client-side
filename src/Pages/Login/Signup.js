@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { FcGoogle } from 'react-icons/fc'
+import useToken from '../hooks/useToken';
 
 const Signup = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -17,11 +18,12 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    // const location = useLocation();
+    // let from = location.state?.from?.pathname || "/";
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const [token] = useToken(user || gUser);
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
@@ -47,10 +49,8 @@ const Signup = () => {
             <small>{error?.message || gError?.message || updateError?.message}</small>
         </p>
     }
-    if (user || gUser) {
-        // navigate(from, { replace: true });
-        navigate('/');
-        console.log(user);
+    if (token) {
+        navigate('/tools');
     }
     return (
         <div className='flex justify-center items-center h-screen'>

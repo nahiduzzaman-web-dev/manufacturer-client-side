@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import bannerBG from '../../images/bannerBG.jpg';
 
 
@@ -9,7 +9,7 @@ const Banner = () => {
     return (
         <div className='pt-10'>
             <div>
-                <div class="carousel carousel-end rounded-box pt-6">
+                <div class="carousel carousel-end pt-6">
                     <div class="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2016/09/01/15/18/industrial-1636390_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>

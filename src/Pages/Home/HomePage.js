@@ -18,9 +18,14 @@ const HomePage = () => {
             <Company></Company>
             <Offer></Offer>
             <div>
+                <div className='text-center my-10'>
+                    <h3 className='text-3xl text-primary font-bold tracking-[.20em]'>YOU CAN BUY NOW!</h3>
+                    <p className='font-bold'>Don't hesitate to buy, Huh!</p>
+                </div>
+
                 <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10'>
                     {
-                        products.slice(0, 3).map(product => <ProductCard
+                        products.slice(0, 6).map(product => <ProductCard
                             key={product._id}
                             product={product}
                         ></ProductCard>)

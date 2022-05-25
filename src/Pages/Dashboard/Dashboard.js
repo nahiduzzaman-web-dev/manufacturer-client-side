@@ -37,7 +37,7 @@ const Dashboard = () => {
                 </div>
 
                 <div class="stat place-items-center">
-                    <div class="stat-title">Registers</div>
+                    <div class="stat-title">Register</div>
                     <div class="stat-value">{user?.displayName}</div>
                     <div class="stat-desc">Welcome here to Tools Provita Ltd.</div>
                 </div>
