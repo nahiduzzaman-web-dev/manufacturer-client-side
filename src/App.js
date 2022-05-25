@@ -17,6 +17,8 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import AddAReview from './Pages/Dashboard/AddAReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 function App() {
   return (
@@ -39,7 +41,16 @@ function App() {
           <Route path='order' element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddAReview></AddAReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='users' element={
+            <RequireAdmin>
+              <Users></Users>
+            </RequireAdmin>
+          }></Route>
+          <Route path='addProduct' element={
+            <RequireAdmin>
+              <AddProduct></AddProduct>
+            </RequireAdmin>
+          }></Route>
         </Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>

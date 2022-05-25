@@ -10,6 +10,7 @@ import { toast, ToastContainer } from 'react-toastify';
 const Purchase = () => {
 
     const { purchaseId } = useParams();
+    const [qError, setQerror] = useState('');
 
     // const [product, setProduct] = useState([]);
 
@@ -64,7 +65,20 @@ const Purchase = () => {
 
 
             })
-    }
+    };
+
+    const handleQuantity = e => {
+        const inputQuantity = e.target.value;
+        if (inputQuantity < parseInt(product.minimum_quantity)) {
+            setQerror('must be order minimum 20 units');
+        }
+        else if (inputQuantity > parseInt(product.available_quantity)) {
+            setQerror('quantity not enough');
+        }
+        else {
+            setQerror('');
+        }
+    };
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -106,9 +120,18 @@ const Purchase = () => {
                                         </div>
                                         <div class="mb-6 md:w-full">
                                             <label htmlFor="orderQuantity" class="block text-xs mb-1">Purchase (quantity)</label>
-                                            <input class="w-full border rounded p-2 outline-none focus:shadow-outline" type="number" name="orderQuantity" id="orderQuantity" placeholder="20" required />
+                                            <input onChange={handleQuantity} class="w-full border rounded p-2 outline-none focus:shadow-outline" type="number" name="orderQuantity" id="orderQuantity" placeholder="20" required />
+                                            {
+                                                <p className='text-red-500'><small>{qError}</small></p>
+                                            }
                                         </div>
-                                        <button class="bg-primary hover:bg-neutral text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
+
+                                        {
+                                            !qError && <button class="bg-primary hover:bg-neutral text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
+                                        }
+
+
+
                                     </form>
                                 </div>
                             </div>

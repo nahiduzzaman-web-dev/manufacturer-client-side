@@ -3,10 +3,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { MdManageAccounts } from 'react-icons/md';
+import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
+    const [admin] = useAdmin(user);
 
     useEffect(() => {
         if (user) {
@@ -61,7 +63,12 @@ const Dashboard = () => {
                         <li className='bg-primary font-mono text-white font-bold mb-3'><Link to='/dashboard/order'>Order List</Link></li>
                         <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/review'>Client Reviews</Link></li>
                         <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/profile'>Profile</Link></li>
-                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>All Users</Link></li>
+                        {
+                            admin && <>
+                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>All Users</Link></li>
+                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+                            </>
+                        }
                     </ul>
 
                 </div>
