@@ -2,22 +2,38 @@ import React, { useEffect, useState } from 'react';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { RiDeleteBin2Fill } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 
 const MyOrder = () => {
 
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?orderEmail=${user.email}`)
-                .then(res => res.json())
-                .then(data => setOrders(data));
+            fetch(`http://localhost:5000/order?orderEmail=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => {
+                    console.log('res', res);
+                    if (res.status === 401 || res.status === 403) {
+                        navigate('/');
+                    }
+                    return res.json()
+                })
+                .then(data => {
+                    setOrders(data);
+                });
         }
-    }, [user])
+    }, [user, navigate])
 
     return (
-        <div className=''>
+        <div>
 
             <div class="overflow-x-auto pt-10 mx-20">
                 <table class="table w-full">

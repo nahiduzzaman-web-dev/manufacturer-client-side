@@ -10,7 +10,12 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?orderEmail=${user.email}`)
+            fetch(`http://localhost:5000/order?orderEmail=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
                 .then(res => res.json())
                 .then(data => setOrders(data));
         }
@@ -53,9 +58,10 @@ const Dashboard = () => {
                     <label htmlFor="dasboard-sidebar" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content">
 
-                        <li className='bg-primary text-white font-bold mb-3'><Link to='/dashboard/order'>Order List</Link></li>
-                        <li className='bg-secondary text-white font-bold mb-3'><Link to='/dashboard/review'>Client Reviews</Link></li>
-                        <li className='bg-accent text-white font-bold mb-3'><Link to='/dashboard/profile'>Profile</Link></li>
+                        <li className='bg-primary font-mono text-white font-bold mb-3'><Link to='/dashboard/order'>Order List</Link></li>
+                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/review'>Client Reviews</Link></li>
+                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/profile'>Profile</Link></li>
+                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>All Users</Link></li>
                     </ul>
 
                 </div>
