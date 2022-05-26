@@ -20,6 +20,7 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import MyPortfolio from './Pages/Home/MyPortfolio';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
         </Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>

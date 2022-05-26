@@ -130,6 +130,10 @@ const Purchase = () => {
                                             !qError && <button class="bg-primary hover:bg-neutral text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
                                         }
 
+                                        {
+                                            qError && <button disabled class="bg-gray-300  cursor-not-allowed text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
+                                        }
+
 
 
                                     </form>
