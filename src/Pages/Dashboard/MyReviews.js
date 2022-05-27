@@ -54,7 +54,7 @@ const MyReviews = () => {
     return (
         <div className='mx-20'>
             <div className='mt-10'>
-                <h3 className='text-xl text-center text-secondary'>Do you want to add new product ?</h3>
+                <h3 className='text-xl text-center text-secondary'>Don't hasitate to give a review.</h3>
                 <form onSubmit={handleSubmit(onSubmit)} className='shadow-2xl p-5 md:pl-20 w-full'>
                     <div className="form-control w-full max-w-md ">
                         <label className="label">
