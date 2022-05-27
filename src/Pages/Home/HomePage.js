@@ -7,11 +7,15 @@ import Company from './Company';
 import Offer from './Offer';
 import ProductCard from './ProductCard';
 import { GiArmoredBoomerang } from 'react-icons/gi';
+import { BiMessageSquareAdd } from 'react-icons/bi';
 import Contact from './Contact';
 import { Link } from 'react-router-dom';
+import useReviews from '../hooks/useReviews';
+import ReviewCollectionRow from './ReviewCollectionRow';
 
 const HomePage = () => {
     const [products] = useProducts();
+    const [reviews] = useReviews();
     return (
         <div className=''>
             <Banner></Banner>
@@ -41,6 +45,28 @@ const HomePage = () => {
                 </div>
             </div>
             <BussinessSummery></BussinessSummery>
+            <div className='mt-10'>
+                <div className='text-center font-bold'>
+                    <h4 className='text-primary tracking-[.20em] text-3xl uppercase'>Reviews</h4>
+                    <h1 className='text-xl uppercase'>Don't Hesitate to review</h1>
+                </div>
+                <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-6 mt-10'>
+                    {
+                        reviews.slice(0, 6).map(review => <ReviewCollectionRow
+                            key={review._id}
+                            review={review}
+                        ></ReviewCollectionRow>)
+                    }
+                </div>
+                <div className='flex justify-center'>
+
+                    <Link to='/reviewCollection'>
+                        <button class="btn btn-wide btn-outline btn-secondary">
+                            <span className='font-bold mr-5 text-xl'>More Reviews</span> <BiMessageSquareAdd className='text-3xl' />
+                        </button>
+                    </Link>
+                </div>
+            </div>
             <Contact></Contact>
             <Footer></Footer>
         </div>

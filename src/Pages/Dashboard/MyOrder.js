@@ -3,6 +3,8 @@ import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { RiDeleteBin2Fill } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { useQuery } from 'react-query';
 
 const MyOrder = () => {
 
@@ -20,7 +22,6 @@ const MyOrder = () => {
                 }
             })
                 .then(res => {
-                    console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
                         navigate('/');
                     }
@@ -30,7 +31,11 @@ const MyOrder = () => {
                     setOrders(data);
                 });
         }
-    }, [user, navigate])
+    }, [user, navigate]);
+
+    const handleDelete = () => {
+
+    }
 
     return (
         <div>
@@ -61,7 +66,7 @@ const MyOrder = () => {
                                     <img src={order.productImg} alt="" style={{ width: '50px' }} />
                                 </td>
                                 <td>
-                                    <button class="btn btn-xs bg-red-500 border-0 text-white rounded-full">
+                                    <button onClick={handleDelete} class="btn btn-xs bg-red-500 border-0 text-white rounded-full">
                                         <div class="tooltip tooltip-open tooltip-right z-100" data-tip="Delete">
                                             <RiDeleteBin2Fill />
                                         </div>

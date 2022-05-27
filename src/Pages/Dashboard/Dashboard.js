@@ -59,15 +59,18 @@ const Dashboard = () => {
                 <div class="drawer-side">
                     <label htmlFor="dasboard-sidebar" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content">
-
-                        <li className='bg-primary font-mono text-white font-bold mb-3'><Link to='/dashboard/order'>Order List</Link></li>
-                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/review'>Client Reviews</Link></li>
-                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/profile'>Profile</Link></li>
+                        <li className=' bg-primary font-mono text-white font-bold mb-3'><Link to='/dashboard/profile'>My Profile</Link></li>
+                        <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/order'>My Order</Link></li>
                         {
                             admin && <>
-                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>All Users</Link></li>
+                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/users'>Make Admin</Link></li>
                                 <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/addProduct'>Add Product</Link></li>
                                 <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/manageProducts'>Manage Products</Link></li>
+                            </>
+                        }
+                        {
+                            !admin && <>
+                                <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/review'>Add Reviews</Link></li>
                             </>
                         }
                     </ul>

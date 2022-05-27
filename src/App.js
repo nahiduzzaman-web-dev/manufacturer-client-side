@@ -21,6 +21,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyPortfolio from './Pages/Home/MyPortfolio';
+import ReviewCollection from './Pages/Home/ReviewCollection';
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         </Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/reviewCollection' element={<ReviewCollection></ReviewCollection>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

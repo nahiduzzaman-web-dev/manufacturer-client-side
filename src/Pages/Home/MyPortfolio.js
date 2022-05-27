@@ -8,13 +8,14 @@ import photography from '../../images/photography.png';
 import doctor from '../../images/doctors.png';
 import warehouse from '../../images/warehouse.png';
 import Footer from '../Shared/Footer';
+import profilePic from '../../images/profile.png';
 
 const MyPortfolio = () => {
     return (
         <div className='mx-20'>
             <div class="hero min-h-screen font-sans">
                 <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" alt='' />
+                    <img src={profilePic} class="max-w-sm rounded-lg" alt='' style={{ height: '350px' }} />
                     <div>
                         <h1 class="text-5xl font-bold"><span>Hi, I'm</span> <br /><span className='text-primary'> Md. Nahiduzzaman Nahid</span></h1>
                         <h3 className='text-3xl'>Web Designer & Developer</h3>
@@ -63,55 +64,68 @@ const MyPortfolio = () => {
             </div>
 
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4'>
-                <div class="card shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <img src="https://miro.medium.com/max/1400/0*4DpFVUP_VfkhzSIL" alt="" class="rounded-xl" style={{ height: '200px' }} />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Web Design</h2>
-                        <p>Web design is the process of planning, conceptualizing, and arranging content online. Today, designing a website goes beyond aesthetics to include the website's overall functionality.</p>
-                    </div>
+            <div>
+                <div className='text-center font-bold mb-10'>
+                    <h4 className='text-primary tracking-[.20em] text-3xl uppercase'>Experiences</h4>
                 </div>
-                <div class="card shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <img src="https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-768x588.jpg" alt="" class="rounded-xl" style={{ height: '200px' }} />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Web Development</h2>
-                        <p>Web development, also known as website development, refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser.</p>
+                <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4'>
+                    <div class="card shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://miro.medium.com/max/1400/0*4DpFVUP_VfkhzSIL" alt="" class="rounded-xl" style={{ height: '200px' }} />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Web Design</h2>
+                            <p>Web design is the process of planning, conceptualizing, and arranging content online. Today, designing a website goes beyond aesthetics to include the website's overall functionality.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <img src="https://www.webtempleasia.com/website-design-blog/data/editor/post-img/68-website-maintenance-tasks-bug-fixes/post-thumbail-40-1003x627.jpg?v=1560418094645" alt="" class="rounded-xl" style={{ height: '200px' }} />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Web Bug Fixes</h2>
-                        <p>Web design is the process of planning, conceptualizing, and arranging content online. Today, designing a website goes beyond aesthetics to include the website's overall functionality.</p>
+                    <div class="card shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-768x588.jpg" alt="" class="rounded-xl" style={{ height: '200px' }} />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Web Development</h2>
+                            <p>Web development, also known as website development, refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://www.webtempleasia.com/website-design-blog/data/editor/post-img/68-website-maintenance-tasks-bug-fixes/post-thumbail-40-1003x627.jpg?v=1560418094645" alt="" class="rounded-xl" style={{ height: '200px' }} />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Web Bug Fixes</h2>
+                            <p>Web design is the process of planning, conceptualizing, and arranging content online. Today, designing a website goes beyond aesthetics to include the website's overall functionality.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className='flex justify-center'>
-                <div className='mt-20'>
-                    <h4 className='font-bold'>HTML5</h4>
-                    <progress class="progress progress-info w-56" value="95" max="100"></progress>
-                    <h4 className='font-bold'>CSE</h4>
-                    <progress class="progress progress-info w-56" value="80" max="100"></progress>
-                    <h4 className='font-bold'>Bootstrap</h4>
-                    <progress class="progress progress-info w-56" value="85" max="100"></progress>
-                    <h4 className='font-bold'>Tailwind</h4>
-                    <progress class="progress progress-info w-56" value="75" max="100"></progress>
-                    <h4 className='font-bold'>React</h4>
-                    <progress class="progress progress-info w-56" value="80" max="100"></progress>
-                    <h4 className='font-bold'>Node JS.</h4>
-                    <progress class="progress progress-info w-56" value="60" max="100"></progress>
+            <div className='mt-10'>
+                <div className='text-center font-bold'>
+                    <h4 className='text-primary tracking-[.20em] text-3xl uppercase'>Skils on Web</h4>
+                </div>
+                <div className='flex justify-center'>
+                    <div className='mt-10'>
+                        <h4 className='font-bold'>HTML5</h4>
+                        <progress class="progress progress-info w-56" value="95" max="100"></progress>
+                        <h4 className='font-bold'>CSE</h4>
+                        <progress class="progress progress-info w-56" value="80" max="100"></progress>
+                        <h4 className='font-bold'>Bootstrap</h4>
+                        <progress class="progress progress-info w-56" value="85" max="100"></progress>
+                        <h4 className='font-bold'>Tailwind</h4>
+                        <progress class="progress progress-info w-56" value="75" max="100"></progress>
+                        <h4 className='font-bold'>React</h4>
+                        <progress class="progress progress-info w-56" value="80" max="100"></progress>
+                        <h4 className='font-bold'>Node JS.</h4>
+                        <progress class="progress progress-info w-56" value="60" max="100"></progress>
+                    </div>
                 </div>
             </div>
 
             <div className='mt-20'>
-                <h4 className='text-center text-2xl font-bold text-primary mb-10'>Education Qualification</h4>
+                <div className='text-center font-bold mb-10'>
+                    <h4 className='text-primary tracking-[.20em] text-3xl uppercase'>Education Qualification</h4>
+                </div>
+
                 <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4'>
                     <div class="card shadow-2xl bg-primary text-white">
                         <div class="card-body items-center text-center">
@@ -146,7 +160,9 @@ const MyPortfolio = () => {
             </div>
 
             <div className='my-20'>
-                <h4 className='text-center text-2xl font-bold text-primary mb-10'>Some Projects Done</h4>
+                <div className='text-center font-bold mb-10'>
+                    <h4 className='text-primary tracking-[.20em] text-3xl uppercase'>Some Projects Done</h4>
+                </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 cursor-pointer'>
                     <div class="card shadow-xl tooltip-open" data-tip="Click me">

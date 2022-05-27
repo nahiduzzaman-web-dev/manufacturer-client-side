@@ -14,7 +14,7 @@ const Header = () => {
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/tools'>Tools</Link></li>
-        <li><Link to='/review'>Reviews</Link></li>
+        <li><Link to='/reviewCollection'>Reviews</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/portfolio'>Portfolio</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
