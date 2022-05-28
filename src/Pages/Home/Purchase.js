@@ -20,10 +20,10 @@ const Purchase = () => {
 
 
 
-    const { data: product, isLoading, refetch } = useQuery([purchaseId], () => fetch(`http://localhost:5000/tool/${purchaseId}`).then(res => res.json()))
+    const { data: product, isLoading, refetch } = useQuery([purchaseId], () => fetch(`https://blooming-lake-83888.herokuapp.com/tool/${purchaseId}`).then(res => res.json()))
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/tool/${purchaseId}`)
+    //     fetch(`https://blooming-lake-83888.herokuapp.com/tool/${purchaseId}`)
     //         .then((res) => res.json())
     //         .then((data) => {
     //             setProduct(data);
@@ -49,7 +49,7 @@ const Purchase = () => {
             orderQuantity: e.target.orderQuantity.value,
         }
         console.log(purchase);
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://blooming-lake-83888.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -97,41 +97,41 @@ const Purchase = () => {
 
                     </div>
                     <div className='mt-6'>
-                        <div class="antialiased bg-gray-200 text-gray-900 font-sans">
-                            <div class="flex items-center h-screen w-full">
-                                <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
-                                    <span class="block w-full text-xl uppercase font-bold mb-4">Order</span>
-                                    <form onSubmit={handlePurchase} class="mb-4">
-                                        <div class="mb-4 md:w-full">
-                                            <label htmlFor="name" class="block text-xs mb-1">Name</label>
-                                            <input value={user?.displayName || ''} class="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="name" id="name" required readOnly disabled />
+                        <div className="antialiased bg-gray-200 text-gray-900 font-sans">
+                            <div className="flex items-center h-screen w-full">
+                                <div className="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+                                    <span className="block w-full text-xl uppercase font-bold mb-4">Order</span>
+                                    <form onSubmit={handlePurchase} className="mb-4">
+                                        <div className="mb-4 md:w-full">
+                                            <label htmlFor="name" className="block text-xs mb-1">Name</label>
+                                            <input value={user?.displayName || ''} className="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="name" id="name" required readOnly disabled />
                                         </div>
-                                        <div class="mb-4 md:w-full">
-                                            <label htmlFor="email" class="block text-xs mb-1">Email</label>
-                                            <input value={user?.email || ''} class="w-full border rounded p-2 outline-none focus:shadow-outline" type="email" name="email" id="email" required readOnly disabled />
+                                        <div className="mb-4 md:w-full">
+                                            <label htmlFor="email" className="block text-xs mb-1">Email</label>
+                                            <input value={user?.email || ''} className="w-full border rounded p-2 outline-none focus:shadow-outline" type="email" name="email" id="email" required readOnly disabled />
                                         </div>
-                                        <div class="mb-4 md:w-full">
-                                            <label htmlFor="address" class="block text-xs mb-1">Address</label>
-                                            <input class="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="address" id="address" placeholder="ex: R-10, H-12, F-6/a, Mirpur-2" required />
+                                        <div className="mb-4 md:w-full">
+                                            <label htmlFor="address" className="block text-xs mb-1">Address</label>
+                                            <input className="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="address" id="address" placeholder="ex: R-10, H-12, F-6/a, Mirpur-2" required />
                                         </div>
-                                        <div class="mb-6 md:w-full">
-                                            <label htmlFor="mobile" class="block text-xs mb-1">Mobile</label>
-                                            <input class="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="mobile" id="mobile" placeholder="ex: 01774003246" required />
+                                        <div className="mb-6 md:w-full">
+                                            <label htmlFor="mobile" className="block text-xs mb-1">Mobile</label>
+                                            <input className="w-full border rounded p-2 outline-none focus:shadow-outline" type="text" name="mobile" id="mobile" placeholder="ex: 01774003246" required />
                                         </div>
-                                        <div class="mb-6 md:w-full">
-                                            <label htmlFor="orderQuantity" class="block text-xs mb-1">Purchase (quantity)</label>
-                                            <input onChange={handleQuantity} class="w-full border rounded p-2 outline-none focus:shadow-outline" type="number" name="orderQuantity" id="orderQuantity" placeholder="20" required />
+                                        <div className="mb-6 md:w-full">
+                                            <label htmlFor="orderQuantity" className="block text-xs mb-1">Purchase (quantity)</label>
+                                            <input onChange={handleQuantity} className="w-full border rounded p-2 outline-none focus:shadow-outline" type="number" name="orderQuantity" id="orderQuantity" placeholder="20" required />
                                             {
                                                 <p className='text-red-500'><small>{qError}</small></p>
                                             }
                                         </div>
 
                                         {
-                                            !qError && <button class="bg-primary hover:bg-neutral text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
+                                            !qError && <button className="bg-primary hover:bg-neutral text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
                                         }
 
                                         {
-                                            qError && <button disabled class="bg-gray-300  cursor-not-allowed text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
+                                            qError && <button disabled className="bg-gray-300  cursor-not-allowed text-white uppercase text-sm font-semibold px-4 py-2 rounded">Purchase</button>
                                         }
 
 

@@ -9,34 +9,34 @@ const Banner = () => {
     return (
         <div className='pt-10'>
             <div>
-                <div class="carousel carousel-end pt-6">
-                    <div class="carousel-item">
+                <div className="carousel carousel-end pt-6">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2016/09/01/15/18/industrial-1636390_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2018/01/17/06/21/electrician-3087536_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2019/12/01/18/04/hairdresser-4666064_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2021/01/06/10/15/woman-5893942_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2018/01/20/08/01/craftsmen-3094035_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img src="https://cdn.pixabay.com/photo/2018/03/30/18/53/carpenter-3276186_960_720.jpg" alt="Drink" style={{ width: '400px' }} />
                     </div>
                 </div>
-                <div class="hero bg-base-200 p-10">
+                <div className="hero bg-base-200 p-10">
 
-                    <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
                         <div>
-                            <img src={bannerBG} class="max-w-sm rounded-lg shadow-2xl w-full" alt='' />
+                            <img src={bannerBG} className="max-w-sm rounded-lg shadow-2xl w-full" alt='' />
                         </div>
                         <div className='' style={{ width: '40%' }}>
                             <h1 className="text-5xl font-bold uppercase tracking-[.10em]">Hello there <span className='text-primary'>!</span></h1>

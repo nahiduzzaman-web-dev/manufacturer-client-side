@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
             </div>
             <button
                 onClick={() => handlePurchase(product._id)}
-                class="btn btn-block rounded-none bg-primary border-0 text-white capitalize text-2xl">Purchase</button>
+                className="btn btn-block rounded-none bg-primary border-0 text-white capitalize text-2xl">Purchase</button>
         </div>
     );
 };

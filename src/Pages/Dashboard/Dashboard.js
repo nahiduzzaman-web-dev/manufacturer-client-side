@@ -12,7 +12,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?orderEmail=${user.email}`, {
+            fetch(`https://blooming-lake-83888.herokuapp.com/order?orderEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -24,41 +24,41 @@ const Dashboard = () => {
     }, [user])
     return (
         <div className='bg-base-200'>
-            <div class="stats shadow mt-20 w-full rounded-none">
-                <div class="stat">
-                    <div class="stat-title text-center text-2xl font-bold">Welcome to your DASHBOARD !</div>
+            <div className="stats shadow mt-20 w-full rounded-none">
+                <div className="stat">
+                    <div className="stat-title text-center text-2xl font-bold">Welcome to your DASHBOARD !</div>
                 </div>
             </div>
-            <div class="stats shadow w-full rounded-none">
+            <div className="stats shadow w-full rounded-none">
 
-                <div class="stat place-items-end">
-                    <div class="stat-title"></div>
-                    <div class="stat-value text-5xl text-green-400">< MdManageAccounts /></div>
-                    <div class="stat-desc"></div>
+                <div className="stat place-items-end">
+                    <div className="stat-title"></div>
+                    <div className="stat-value text-5xl text-green-400">< MdManageAccounts /></div>
+                    <div className="stat-desc"></div>
                 </div>
 
-                <div class="stat place-items-center">
-                    <div class="stat-title">Orders</div>
-                    <div class="stat-value text-secondary">{orders.length}</div>
-                    <div class="stat-desc text-secondary">Don't hesitate to buy</div>
+                <div className="stat place-items-center">
+                    <div className="stat-title">Orders</div>
+                    <div className="stat-value text-secondary">{orders.length}</div>
+                    <div className="stat-desc text-secondary">Don't hesitate to buy</div>
                 </div>
 
-                <div class="stat place-items-center">
-                    <div class="stat-title">Register</div>
-                    <div class="stat-value">{user?.displayName}</div>
-                    <div class="stat-desc">Welcome here to Tools Provita Ltd.</div>
+                <div className="stat place-items-center">
+                    <div className="stat-title">Register</div>
+                    <div className="stat-value">{user?.displayName}</div>
+                    <div className="stat-desc">Welcome here to Tools Provita Ltd.</div>
                 </div>
 
             </div>
 
-            <div class="drawer drawer-mobile">
-                <input id="dasboard-sidebar" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content">
+            <div className="drawer drawer-mobile">
+                <input id="dasboard-sidebar" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
                     <Outlet></Outlet>
                 </div>
-                <div class="drawer-side">
-                    <label htmlFor="dasboard-sidebar" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content">
+                <div className="drawer-side">
+                    <label htmlFor="dasboard-sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 overflow-y-auto w-50 bg-base-100 text-base-content">
                         <li className=' bg-primary font-mono text-white font-bold mb-3'><Link to='/dashboard/profile'>My Profile</Link></li>
                         <li className='bg-cyan-500 font-mono text-white font-bold mb-3'><Link to='/dashboard/order'>My Order</Link></li>
                         {

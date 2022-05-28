@@ -4,7 +4,7 @@ const useReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviewCollection')
+        fetch('https://blooming-lake-83888.herokuapp.com/reviewCollection')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

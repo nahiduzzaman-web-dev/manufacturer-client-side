@@ -38,7 +38,7 @@ const HomePage = () => {
                 <div className='flex justify-center'>
 
                     <Link to='/tools'>
-                        <button class="btn btn-wide btn-outline btn-primary">
+                        <button className="btn btn-wide btn-outline btn-primary">
                             <span className='font-bold mr-5 text-xl'>More Purchase</span> <GiArmoredBoomerang className='text-3xl' />
                         </button>
                     </Link>
@@ -61,7 +61,7 @@ const HomePage = () => {
                 <div className='flex justify-center'>
 
                     <Link to='/reviewCollection'>
-                        <button class="btn btn-wide btn-outline btn-secondary">
+                        <button className="btn btn-wide btn-outline btn-secondary">
                             <span className='font-bold mr-5 text-xl'>More Reviews</span> <BiMessageSquareAdd className='text-3xl' />
                         </button>
                     </Link>

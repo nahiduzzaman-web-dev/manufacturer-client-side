@@ -28,7 +28,7 @@ const MyReviews = () => {
                         rating: data.rating,
                         image: img
                     }
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://blooming-lake-83888.herokuapp.com/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -102,7 +102,7 @@ const MyReviews = () => {
                         <label className="label">
                             <span className="label-text font-bold">Rating</span>
                         </label>
-                        <select {...register("rating")} class="select w-full max-w-xs">
+                        <select {...register("rating")} className="select w-full max-w-xs">
                             <option>5</option>
                             <option>4</option>
                             <option>3</option>

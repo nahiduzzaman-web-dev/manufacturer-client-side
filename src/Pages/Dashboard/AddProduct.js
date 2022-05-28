@@ -32,7 +32,7 @@ const AddProduct = () => {
                     }
                     console.log('add product', addProduct);
 
-                    fetch('http://localhost:5000/tool', {
+                    fetch('https://blooming-lake-83888.herokuapp.com/tool', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -15,7 +15,7 @@ const MyProfile = () => {
     const [profile, setProfile] = useState({});
     const { id } = useParams();
     useEffect(() => {
-        const url = `http://localhost:5000/profile/${user.email}`
+        const url = `https://blooming-lake-83888.herokuapp.com/profile/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProfile(data))
@@ -47,7 +47,7 @@ const MyProfile = () => {
                         linkedinUrl: data.linkedin,
                         image: img
                     }
-                    fetch('http://localhost:5000/profile', {
+                    fetch('https://blooming-lake-83888.herokuapp.com/profile', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -69,51 +69,29 @@ const MyProfile = () => {
                 }
 
             })
-        // const updateProfile = {
-        //     name: profile.name,
-        //     email: profile.email,
-        //     education: profile.education,
-        //     mobile: profile.mobile,
-        //     location: profile.location,
-        //     linkedinUrl: profile.linkedin,
-        //     image: profile.image
 
-        // }
-        // console.log(updateProfile);
-        // fetch(`http://localhost:5000/profile/${user.email}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type ': 'application/json'
-        //     },
-        //     body: JSON.stringify(updateProfile)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         toast.success('Update Successfully. Yeah!')
-        //         console.log('update', data);
-        //     })
 
 
     }
     return (
         <div className='mx-20 py-10'>
 
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card lg:card-side bg-base-100 shadow-xl">
 
-                <div class="avatar  online" style={{ boxShadow: 'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset' }}>
-                    <div class="rounded-full py-5 px-8" >
+                <div className="avatar  online" style={{ boxShadow: 'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset' }}>
+                    <div className="rounded-full py-5 px-8" >
                         <img src={profile.image} alt="Album" style={{ width: '350px' }} />
                     </div>
                 </div>
                 {/* <figure><img src={profile.image} alt="Album" style={{ width: '450px' }} /></figure> */}
 
                 <div className='card-body'>
-                    <h2 class="text-xl flex items-center"> <FaUserCircle className='mr-3 text-primary' /> {user?.displayName}</h2>
-                    <h2 class="text-xl flex items-center"><MdEmail className='mr-3 text-primary' />{user?.email}</h2>
+                    <h2 className="text-xl flex items-center"> <FaUserCircle className='mr-3 text-primary' /> {user?.displayName}</h2>
+                    <h2 className="text-xl flex items-center"><MdEmail className='mr-3 text-primary' />{user?.email}</h2>
 
-                    <h2 class="card-title ">Education: {profile.education}</h2>
-                    <h2 class="card-title ">Location: {profile.location}</h2>
-                    <h2 class="card-title ">Mobile: {profile.mobile}</h2>
+                    <h2 className="card-title ">Education: {profile.education}</h2>
+                    <h2 className="card-title ">Location: {profile.location}</h2>
+                    <h2 className="card-title ">Mobile: {profile.mobile}</h2>
 
                     <a target='_blank' rel="noopener noreferrer" href={profile.linkedinUrl} className='flex items-center mb-10'>
                         <AiFillLinkedin className='text-xl text-sky-600 font-bold' />
@@ -122,10 +100,10 @@ const MyProfile = () => {
 
 
 
-                    <label for="update-profile-modal" class="btn btn-sm lg:mx-20 rounded bg-primary border-0 text-white capitalize text-xl hover:bg-sky-600">Update Profile</label>
-                    <input type="checkbox" id="update-profile-modal" class="modal-toggle" />
-                    <div class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box">
+                    <label for="update-profile-modal" className="btn btn-sm lg:mx-20 rounded bg-primary border-0 text-white capitalize text-xl hover:bg-sky-600">Update Profile</label>
+                    <input type="checkbox" id="update-profile-modal" className="modal-toggle" />
+                    <div className="modal modal-bottom sm:modal-middle">
+                        <div className="modal-box">
 
 
                             <div className='mt-10'>
@@ -169,7 +147,7 @@ const MyProfile = () => {
                                                     message: 'Email address is Required.'
                                                 }
                                             })}
-                                            readonly
+                                            readOnly
                                         />
                                         <label className="label">
                                             {errors.name?.type === 'required' &&
@@ -202,7 +180,7 @@ const MyProfile = () => {
                                         <label className="label ">
                                             <span className="label-text font-bold">City</span>
                                         </label>
-                                        <select {...register("location")} class="select w-full max-w-xs">
+                                        <select {...register("location")} className="select w-full max-w-xs">
                                             <option>Dhaka</option>
                                             <option>Chittagong</option>
                                             <option>Sylhet</option>
@@ -279,8 +257,8 @@ const MyProfile = () => {
                                 </form>
                             </div>
 
-                            <div class="modal-action">
-                                <label for="update-profile-modal" class="btn bg-red-500 text-white border-0 btn-xs">Closed</label>
+                            <div className="modal-action">
+                                <label for="update-profile-modal" className="btn bg-red-500 text-white border-0 btn-xs">Closed</label>
                             </div>
                         </div>
                     </div>
